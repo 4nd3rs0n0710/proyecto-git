@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('media/jake-the-dog_800.gif') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: brightness(0.6);
+        }
+
+        .form-section {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #f1d3b3;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+        }
+
+        label {
+            color: #ccc;
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            color: #fff;
+            font-size: 15px;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #888;
+            background-color: #2a2a2a;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #444;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #666;
+            transform: scale(1.03);
+        }
+
+        p {
+            color: #ccc;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #66ccff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="form-section" id="registroForm">
+            <h2>Registro</h2>
+            <form>
+                <label>Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" />
+            <br><br>
+                <label>Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Ingrese su email"/>
+            <br><br>
+                <label>Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña"/>
+            <br><br>
+            <label>Contraseña:</label>
+            <input type="password" id="confirmacion" name="confirmacion" placeholder="Confirme su contraseña"/>
+            <br>
+                <input type="submit" class="submit-btn" value="Registrar" />
+                </form>
+                <br>
+                <p>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+                
+    
+                
+</div>
+    </body>
+</html>
