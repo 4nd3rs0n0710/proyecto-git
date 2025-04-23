@@ -12,83 +12,91 @@
         <title>JSP Page</title>
         
         <style>
-         body {
-            height: 100vh;
+        body {
             margin: 0;
-            background: linear-gradient(135deg, #1f1c2c, #928DAB);
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('media/jake-the-dog_800.gif') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
+            backdrop-filter: brightness(0.6);
+            color: #ffffff;
         }
 
         .result-container {
-            background-color: #2c2c2c;
+            background-color: rgba(0, 0, 0, 0.85);
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            text-align: center;
             max-width: 600px;
             width: 90%;
-            text-align: center;
+            animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
-            color: #ffffff;
             margin-bottom: 20px;
+            font-size: 28px;
+            color: #f1d3b3;
         }
 
         .welcome-message {
-            font-size: 22px;
-            font-weight: bold;
-            color: #4efcb4;
+            font-size: 20px;
             margin-bottom: 10px;
+            color: #aee9af;
         }
 
         .succes-message {
-            color: #ccc;
-            margin-bottom: 25px;
+            color: #66ffcc;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
 
         .error-message {
-            color: #ff6b6b;
+            color: #ff6666;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
         a {
-            color: #4e8cff;
+            color: #ffd699;
             text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 10px;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #fff8dc;
         }
 
         .menu {
             list-style: none;
             padding: 0;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .menu li {
             margin: 10px 0;
         }
 
-        .menu li a {
-            background-color: #444;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-            display: inline-block;
+        .menu a {
+            color: #66ccff;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .menu li a:hover {
-            background-color: #4e8cff;
+        .menu a:hover {
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
     
@@ -106,7 +114,7 @@
         <p class="succes-message">Has iniciado sesion correctamente.</p>
         
         <ul class="menu"
-            <li><a href="">Inicio</a></li>
+            <li><a href="login.html">Inicio</a></li>
             <li><a href="">perfil</a></li>
             <li><a href="">configuracion</a></li>
         </ul>
