@@ -10,84 +10,121 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <style>
-            * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            height: 100vh;
-            background: linear-gradient(135deg, #1f1c2c, #928DAB);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    body {
+        height: 100vh;
+        background-color: #1f1c2c; /* Color base del gradiente anterior */
+        background-image: 
+            linear-gradient(to bottom, #1f1c2c, #928DAB); /* Alternativa con linear-gradient */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 
+    .login-container {
+        background-color: #2c2c2c;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid rgba(100, 80, 60, 0.3); /* Borde sutil rústico */
+    }
+
+    .login-title {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #ffffff;
+        position: relative;
+    }
+
+    .login-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 25%;
+        right: 25%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #A67C52, transparent);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #cccccc;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #444;
+        border: 1px solid #666;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #A67C52; /* Tonos tierra para el enfoque */
+        background-color: #555;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.3);
+    }
+
+    .submit-btn {
+        width: 100%;
+        background: linear-gradient(to right, #5A4A42, #8B5A2B); /* Degradado terroso */
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+        background: linear-gradient(to right, #8B5A2B, #5A4A42);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Efecto de placeholder */
+    ::placeholder {
+        color: #aaa;
+        opacity: 1;
+    }
+
+    /* Versión responsive */
+    @media (max-width: 480px) {
         .login-container {
-            background-color: #2c2c2c;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            width: 100%;
-            max-width: 400px;
+            padding: 30px 20px;
         }
-
+        
         .login-title {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 25px;
-            font-weight: bold;
-            color: #ffffff;
+            font-size: 24px;
         }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #cccccc;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #444;
-            border: 1px solid #666;
-            border-radius: 8px;
-            font-size: 15px;
-            color: #fff;
-            transition: border 0.3s ease, background 0.3s ease;
-        }
-
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #4e8cff;
-            background-color: #555;
-            outline: none;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background-color: #4e8cff;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #346cd2;
-        }
-        </style>
+    }
+</style>
         
     </head>
     <body>
